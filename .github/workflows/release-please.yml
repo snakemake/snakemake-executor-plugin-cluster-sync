@@ -11,11 +11,11 @@ jobs:
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
     steps:
-      - uses: GoogleCloudPlatform/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           release-type: python
-          package-name: snakemake-executor-plugin-cluster-sync
+          token: ${{ secrets.RELEASE_PLEASE_PR_CI_TOKEN }}
 
   publish:
     runs-on: ubuntu-latest
