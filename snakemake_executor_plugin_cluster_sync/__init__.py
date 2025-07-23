@@ -117,9 +117,8 @@ class Executor(RemoteExecutor):
                 self.report_job_error(active_job)
 
     def cancel_jobs(self, active_jobs: List[SubmittedJobInfo]):
-        # Cancel all active jobs.
-        # This method is called when Snakemake is interrupted.
-        self.logger.info("Will exit after finishing currently running jobs.")
+        for active_job in active_jobs:
+            active_job.aux["process"].kill()
 
     def get_job_exec_prefix(self, job):
         if self.workflow.storage_settings.assume_common_workdir:
