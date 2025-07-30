@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/snakemake/snakemake-executor-plugin-cluster-sync/compare/v0.1.4...v0.1.5) (2025-07-30)
+
+
+### Bug Fixes
+
+* kill jobs upon cancelling ([#10](https://github.com/snakemake/snakemake-executor-plugin-cluster-sync/issues/10)) ([651d034](https://github.com/snakemake/snakemake-executor-plugin-cluster-sync/commit/651d034af27075893217d21baa053b5d00d343a6))
+
 ## [0.1.4](https://github.com/snakemake/snakemake-executor-plugin-cluster-sync/compare/v0.1.3...v0.1.4) (2024-03-12)
 
 
